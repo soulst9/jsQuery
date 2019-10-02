@@ -1,0 +1,22 @@
+{
+  "name": "jsquery",
+  "version": "0.1.0",
+  "description": "Begin to build a library that helps you easily change an already defined object type to an sql statement",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soulst9/jsQuery.git"
+  },
+  "author": "banzry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soulst9/jsQuery/issues"
+  },
+  "homepage": "https://github.com/soulst9/jsQuery#readme"
+}
