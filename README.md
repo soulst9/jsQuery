@@ -160,7 +160,9 @@ const updateQuery = jsQuery.updateQuery({
 # example 1
 ```
 const deleteQuery = jsQuery.deleteQuery({
-  delete: "tb_images",
+  delete: {
+    table: "tb_images"
+  },
   where: {
     _id: 1
   }
