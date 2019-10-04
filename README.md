@@ -101,6 +101,21 @@ const example4 = jsQuery.selectQuery(
 );
 ```
 
+# example 5
+```
+const q5 = jsQuery.selectQuery(
+  {
+    select: ["_id", "idx", JSQuery.fn("ifnull", "name", "")],
+    from: { 
+      table: "tb_products"
+    },
+    where: {
+      idx: JSQuery.fn('gtthan', 10)
+    }
+  }
+);
+```
+
 ## INSERT QUERY
 
 # example 1
