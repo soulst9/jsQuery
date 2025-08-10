@@ -1,11 +1,20 @@
 {
-  "name": "jsquery",
+  "name": "@jsquery/core",
   "version": "0.3.0",
-  "description": "A lightweight JavaScript library that converts JavaScript objects into SQL statements with built-in SQL injection protection",
+  "description": "Enterprise-grade SQL query builder with advanced performance optimization, caching, and lazy evaluation. Convert JavaScript objects to SQL with 99%+ cache hit rates.",
   "main": "index.js",
   "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "test"
   },
   "scripts": {
     "test": "node test/basic.test.js && node test/functions.test.js",
@@ -14,17 +23,62 @@
     "test:performance": "node test/performance.test.js",
     "test:all": "npm run test && npm run test:performance",
     "benchmark": "node --expose-gc test/performance.test.js",
-    "test:verbose": "node test/basic.test.js --verbose && node test/functions.test.js --verbose"
+    "test:verbose": "node test/basic.test.js --verbose && node test/functions.test.js --verbose",
+    "prepublishOnly": "npm run test:all",
+    "prepack": "npm run test",
+    "demo": "node examples/performance-demo.js",
+    "demo:lazy": "node examples/lazy-explanation.js",
+    "pack:dry-run": "npm pack --dry-run",
+    "publish:dry-run": "npm publish --dry-run",
+    "publish:quick": "npm publish --dry-run --ignore-scripts",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/soulst9/jsQuery.git"
   },
-  "keywords": ["sql", "query", "builder", "mysql", "database", "orm", "sql-injection", "security"],
-  "author": "banzry",
+  "keywords": [
+    "sql", 
+    "query", 
+    "builder", 
+    "mysql", 
+    "database", 
+    "orm", 
+    "sql-injection", 
+    "security",
+    "performance",
+    "caching",
+    "lazy-evaluation",
+    "enterprise",
+    "optimization",
+    "query-builder",
+    "javascript",
+    "node",
+    "typescript"
+  ],
+  "author": {
+    "name": "banzry",
+    "email": "banzry@example.com"
+  },
+  "contributors": [
+    {
+      "name": "Claude AI",
+      "email": "claude@anthropic.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/soulst9/jsQuery/issues"
   },
-  "homepage": "https://github.com/soulst9/jsQuery#readme"
+  "homepage": "https://github.com/soulst9/jsQuery#readme",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

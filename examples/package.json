@@ -1,0 +1,15 @@
+{
+  "name": "jsquery-examples",
+  "version": "1.0.0",
+  "description": "Usage examples for jsQuery library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["jsquery", "examples", "mysql", "query", "builder"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsquery": "file:.."
+  }
+}
