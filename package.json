@@ -1,18 +1,26 @@
 {
   "name": "jsquery",
-  "version": "0.1.0",
-  "description": "Begin to build a library that helps you easily change an already defined object type to an sql statement",
+  "version": "0.3.0",
+  "description": "A lightweight JavaScript library that converts JavaScript objects into SQL statements with built-in SQL injection protection",
   "main": "index.js",
+  "types": "index.d.ts",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/basic.test.js && node test/functions.test.js",
+    "test:basic": "node test/basic.test.js",
+    "test:functions": "node test/functions.test.js",
+    "test:performance": "node test/performance.test.js",
+    "test:all": "npm run test && npm run test:performance",
+    "benchmark": "node --expose-gc test/performance.test.js",
+    "test:verbose": "node test/basic.test.js --verbose && node test/functions.test.js --verbose"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/soulst9/jsQuery.git"
   },
+  "keywords": ["sql", "query", "builder", "mysql", "database", "orm", "sql-injection", "security"],
   "author": "banzry",
   "license": "MIT",
   "bugs": {
