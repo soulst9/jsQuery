@@ -19,13 +19,13 @@ A lightweight JavaScript library that converts JavaScript objects into SQL state
 ## 📦 Installation
 
 ```bash
-npm install jsquery
+npm install @jsquery/core
 ```
 
 ## 🚀 Quick Start
 
 ```javascript
-const JSQuery = require('jsquery');
+const JSQuery = require('@jsquery/core');
 
 // Basic usage
 const jsQuery = new JSQuery();
